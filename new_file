@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="//g.alicdn.com/tb/kimi/0.0.233/kimi.js"></script>
+</head>
+<div class='container'>
+	<div class='span10 rule-relative'>
+		<div class="tree">
+		<ul>
+			<li>
+				<div><span>Parent</span></div>
+				<ul>
+					<li>
+						<div><span>Child</span> </div>
+						<ul>
+							<li>
+								<div><span>Grand Child</span> </div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div><span>Child</span> </div>
+						<ul>
+							<li>
+								<div><span> Grand Child</span> </div>
+							</li>
+							<li>
+								<div><span>Grand Child</span> </div>
+								<ul>
+									<li>
+										<div><span>Great Grand Child</span> </div>
+										<ul>
+											<li>
+												<div><span>Great great Grand Child</span></div>
+											</li>
+											<li>
+												<div><span>Great great Grand Child</span> </div>
+												<ul>
+													<li>
+														<div><span>hellohellohellohellohellohellohellohellohellohello</span></div>
+														<ul>
+															<li>
+																<div><span>Great great Grand Child</span></div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										 </ul>
+									</li>
+									<li>
+										<div><span> Great Grand Child</span></div>
+									</li>
+									<li>
+										<div><span> Great Grand Child</span></div>
+										<ul>
+											<li>
+												<div><span>Great great Grand Child</span></div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div><span>Grand Child</span></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div><span>Parent2</span></div>
+				<ul>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div><span>Parent3</span></div>
+				<ul>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div><span>Parent3</span></div>
+				<ul>
+					<li>
+						<div><span>Child</span></div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	</div>
+</div>
+<script>
+
+$(function () {
+	leftbar(0,4);
+	$('.tree li:has(ul)').addClass('parent_li')/* .find(' > span').attr('title', '伸展此项') */; 
+    /* $('.tree li.parent_li > span').on('click', function (e) {
+        var children = $(this).parent('li.parent_li').find(' > ul > li');
+        if (children.is(":visible")) {
+            children.hide('fast');
+            $(this).attr('title', '展开').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+        } else {
+            children.show('fast');
+            $(this).attr('title', '收起').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+        }
+        e.stopPropagation();
+    });  
+    $('.tree li:not(:has(ul))').find('span').css({
+    	'border':'none'
+    	});*/
+    /* $('.tree li div').each(function(){
+    	$(this).append(lists)
+    })
+    $('.tree li:not(:has(ul))').append('<ul></ul>')
+    $('.tree').on('mouseover mouseout','div',function(){
+    	if(event.type == "mouseover"){
+    		  //鼠标悬浮
+    			$(this).children('em').show();
+    		 }else if(event.type == "mouseout"){
+    		  //鼠标离开
+    			$(this).children('em').hide();
+    		 }
+    }) */
+})
+/* var lists = '<em style="display:none"><button class="button" type="button" onclick="addlist(this);">增加</button><button class="button" type="button" onclick="editlist(this);">修改</button><button class="button" type="button" onclick="deletelist(this);">删除</button></em>';
+var damn ='<big><button class="button" type="button" onclick="savelist(this);">保存</button><button class="button" type="button" onclick="cancellist(this);">取消</button></big>'
+function addlist(added){
+	var lichild = '<li><div><span>add child</span></div><ul></ul></li>'
+	
+	$(added).closest('div').siblings('ul').append(lichild);
+	$(added).closest('div').siblings('ul').find('div:not(:has(em))').append(lists);
+}
+
+function deletelist(deleted){
+	alert('确认删除?')$(deleted).closest('li').remove();
+}
+function editlist(edited){
+	var $oldval =$(edited).closest('div').find('span').text();
+	var $div = $(edited).closest('div');
+	$div.find('em').remove();
+	$div.prepend(damn)
+	$div.find('span').hide();
+	$div.prepend("<input type='text' class='input-medium'/>");
+	$div.find('input').val($oldval);
+	var $newval = $div.find('input').val();
+}
+function savelist(saved){
+	var $nowval = $(saved).closest('div').find('input').val();
+	$(saved).closest('div').find('span').text($nowval).show();
+	$(saved).closest('div').append(lists);
+	$(saved).closest('div').find('big,input').remove();
+}
+function cancellist(canceled){
+	$(canceled).closest('div').find('span').show();
+	$(canceled).closest('div').append(lists)
+	$(canceled).closest('div').find('big,input').remove();
+} */
+</script>
+</body>
+</html>
